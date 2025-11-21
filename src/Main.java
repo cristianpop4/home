@@ -32,5 +32,6 @@ public class Main {
         System.out.println("inmultire " + mul);
         int sub=numar1/numar2;
         System.out.println("impartire " + sub);
+        //test
     }
 }
