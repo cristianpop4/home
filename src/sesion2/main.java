@@ -1,6 +1,6 @@
 package sesion2;
 
-public class sesion2 {
+public class main {
     public static class Main {
         public static void main(String[] args) {
             System.out.println("Hello to Java!");
