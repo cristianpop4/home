@@ -1,4 +1,4 @@
-package sesion2;
+package session2;
 
 public class main {
     public static class Main {

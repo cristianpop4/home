@@ -1,4 +1,4 @@
-package sesion3;
+package session3;
 
 public class postrecrement {
     public static void main(String[] args) {
