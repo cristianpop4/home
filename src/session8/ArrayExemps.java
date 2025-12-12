@@ -7,10 +7,11 @@ import java.util.List;
 
 public class ArrayExemps {
     public static void main(String[] args) {
-//        arrayExemple1();
-//        arrayExemple2();
-//        arrayListExample1();
+        arrayExemple1();
+        arrayExemple2();
+        arrayListExample1();
         linkedListExample();
+        comparatii();
     }
 
     public static void arrayExemple1() {
@@ -68,23 +69,48 @@ public class ArrayExemps {
 
     public static void comparatii() {
         int size = 50000;
+
         List<String> arraylist = new ArrayList<>();
         List<String> linked = new LinkedList<>();
 
+        // Populam ambele liste
         for (int i = 0; i <= size; i++) {
             String value = String.valueOf(i);
             arraylist.add(value);
             linked.add(value);
         }
 
+        // ------------------ TEST 1: ACCESS TIME (get) ------------------
         long start = System.currentTimeMillis();
-        for (int i = 0; i<=size ; i++){
-            arraylist.get(size/2);
+        for (int i = 0; i <= size; i++) {
+            arraylist.get(size / 2); // acces rapid in ArrayList
         }
+        long stop = System.currentTimeMillis() - start;
 
-        long stop = System.currentTimeMillis();
-//        for ()
+        long startLinked = System.currentTimeMillis();
+        for (int i = 0; i <= size; i++) {
+            linked.get(size / 2); // acces lent in LinkedList (trece prin noduri)
+        }
+        long stopLinked = System.currentTimeMillis() - startLinked;
+
+        System.out.println(stop);        // timp ArrayList
+        System.out.println(stopLinked);  // timp LinkedList
+
+        // ------------------ TEST 2: INSERT AT BEGINNING ------------------
+        start = System.currentTimeMillis();
+        for (int i = 0; i <= size; i++) {
+            arraylist.add(0, "x"); // foarte lent: muta toate elementele la dreapta
+        }
+        stop = System.currentTimeMillis() - start;
+
+        startLinked = System.currentTimeMillis();
+        for (int i = 0; i <= size; i++) {
+            linked.add(0, "x"); // foarte rapid: doar leaga nodul nou
+        }
+        stopLinked = System.currentTimeMillis() - startLinked;
+
+        System.out.println(stop);        // timp ArrayList
+        System.out.println(stopLinked);  // timp LinkedList
     }
-
 }
 
