@@ -11,7 +11,7 @@ public class ArrayExemps {
         arrayExemple2();
         arrayListExample1();
         linkedListExample();
-        comparatii();
+       comparatii();
     }
 
     public static void arrayExemple1() {
@@ -111,6 +111,7 @@ public class ArrayExemps {
 
         System.out.println(stop);        // timp ArrayList
         System.out.println(stopLinked);  // timp LinkedList
+//    session8
     }
 }
 
