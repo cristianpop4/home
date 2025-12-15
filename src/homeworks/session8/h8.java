@@ -4,14 +4,14 @@ import java.util.*;
 
 public class h8 {
     public static void main(String[] args) {
-//        shoppingList();
-//        wishlist();
-//        graduatedStudents();
-//        countIntegers();
-//        cityNames();
-//        storingStudents();
-//        fruitsSort();
-//        movieSearch();
+        shoppingList();
+        wishlist();
+        graduatedStudents();
+        countIntegers();
+        cityNames();
+        storingStudents();
+        fruitsSort();
+        movieSearch();
         binaryConvertor();
     }
 
