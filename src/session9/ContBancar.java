@@ -28,8 +28,8 @@ public class ContBancar {
         }
     }
 
-    public static void setDobanda(double valoare) {
-        dobanda = valoare;
+    public static void setDobanda(double dobanda) {
+        ContBancar.dobanda = dobanda;
     }
 
     public void getDetails() {
