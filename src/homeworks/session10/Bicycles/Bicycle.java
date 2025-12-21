@@ -1,7 +1,7 @@
 package homeworks.session10.Bicycles;
 
 public class Bicycle {
-    // not finished
+
     private int speed;
     private int gear;
 
