@@ -8,6 +8,9 @@ public class TreeSets {
         itereate();
         reverseTreeSet();
         firstLast();
+        numberOfElemnets();
+        lessThen(7);
+        remove(5);
     }
 
     private static TreeSet<String> treeSet(){
@@ -36,5 +39,29 @@ public class TreeSets {
         System.out.println("The last element is: " + treeSet.last());
     }
 
+    private static void numberOfElemnets(){
+        TreeSet<String> treeSet = treeSet();
+        System.out.println(treeSet.size());
+    }
 
+    private static TreeSet<Integer> treeSet1(){
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (int i = 1 ; i <= 10 ; i++)
+            treeSet.add(i);
+        return treeSet;
+    }
+
+    private static void lessThen(int x){
+        TreeSet<Integer> treeSet = treeSet1();
+        for (int item : treeSet){
+            if (item < x)
+                System.out.println("The number" + item);
+        }
+    }
+
+    private static void remove(int x){
+        TreeSet<Integer> treeSet = treeSet1();
+        treeSet.remove(x);
+        System.out.println(treeSet);
+    }
 }
