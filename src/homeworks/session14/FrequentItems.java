@@ -16,8 +16,7 @@ public class FrequentItems {
     }
 
     public List<String> getTop(int k) {
-        List<String> result = new ArrayList<>(); // lista cu produsele cele mai frecvente
-
+        List<String> result = new ArrayList<>();
         if (frequency.isEmpty() || k <= 0)
             return result;
 
