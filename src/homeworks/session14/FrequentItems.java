@@ -18,7 +18,7 @@ public class FrequentItems {
     public List<String> getTop(int k) {
         List<String> result = new ArrayList<>(); // lista cu produsele cele mai frecvente
 
-        if (result.isEmpty() || k <= 0)
+        if (frequency.isEmpty() || k <= 0)
             return result;
 
         Map<String, Integer> copyMap = new HashMap<>(frequency);
