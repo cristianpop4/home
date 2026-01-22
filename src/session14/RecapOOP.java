@@ -1,4 +1,4 @@
-package session13;
+package session14;
 
 interface PaymentMethod {
     void pay(double amount);
