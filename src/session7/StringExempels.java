@@ -1,6 +1,4 @@
-package session6;
-
-import java.util.Locale;
+package session7;
 
 public class StringExempels {
     public static void main(String[] args) {

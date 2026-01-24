@@ -1,6 +1,4 @@
-package session4;
-
-import java.util.Objects;
+package session5;
 
 public class memory {
     public static void main(String[] args) {

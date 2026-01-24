@@ -1,33 +1,65 @@
 package session12;
 
-public abstract class Animal {
-
-    public void eat(){
-        System.out.println("this animal can eat");
+public class Animal {
+    public void makeSound(){
+        System.out.println("animal make sounds");
     }
-
-    public abstract void makeSound();
+    public void sleep(){
+        System.out.println("animal sleeps");
+    }
 }
 
-interface Pet{
-    void poop();
-}
-
-class Cat extends Animal implements Pet{
-
+class Dog extends Animal{
     @Override
     public void makeSound(){
-        System.out.println("The cat miaus");
+        System.out.println("doc barks");
     }
-
     @Override
-    public void poop(){
-        System.out.println("Cats make magic");
+    public void sleep(){
+        System.out.println("dog sleeps");
     }
+    public void featch(){
+        System.out.println("dog get the ball");
+    }
+}
 
-//      non contract
-//    @Override
-//    public void eat(){
-//        System.out.println("My cat eats like a lion");
-//    }
+class Cat extends Animal{
+    @Override
+    public void makeSound(){
+        System.out.println("cats Miau");
+    }
+    @Override
+    public void sleep(){
+        System.out.println("cats sleeps");
+    }
+    public void scratch(){
+        System.out.println("cats makes big scratches");
+    }
+}
+
+class AnimalTest{
+    public static void main(String[] args) {
+        Animal myAnimal = new Dog();
+        myAnimal.makeSound();
+        myAnimal.sleep();
+//        myAnimal.fatch();
+        System.out.println(myAnimal.getClass().getSimpleName());
+
+        try {
+            Cat cat = (Cat) myAnimal;
+            cat.makeSound();
+        }catch (ClassCastException exception){
+            System.out.println("Eroare la cast dintre un caine si o pisica");
+        }
+
+        Animal animal = new Cat();
+        Cat cat = (Cat) animal;
+        cat.makeSound();
+        cat.sleep();
+        cat.scratch();
+
+        System.out.println(cat instanceof Cat);
+        System.out.println(animal instanceof Cat);
+        System.out.println(myAnimal instanceof Dog);
+    }
 }

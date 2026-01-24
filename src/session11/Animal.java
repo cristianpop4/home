@@ -1,65 +1,56 @@
 package session11;
 
-public class Animal {
-    public void makeSound(){
-        System.out.println("animal make sounds");
+public  class Animal {
+    private String name;
+
+    public Animal(String name){
+        this.name = name;
     }
-    public void sleep(){
-        System.out.println("animal sleeps");
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void sound(){
+        System.out.println("Animal makes a sound");
     }
 }
 
-class Dog extends Animal{
-    @Override
-    public void makeSound(){
-        System.out.println("doc barks");
+ class Dog extends Animal{
+
+    private String race;
+
+    public Dog (String name, String race){
+        super(name);
+        this.race =race;
     }
-    @Override
-    public void sleep(){
-        System.out.println("dog sleeps");
+
+    public String getRace() {
+        return race;
     }
-    public void featch(){
-        System.out.println("dog get the ball");
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    @Override
+    public void sound(){
+        System.out.println("My dog barks!");
     }
 }
 
-class Cat extends Animal{
-    @Override
-    public void makeSound(){
-        System.out.println("cats Miau");
-    }
-    @Override
-    public void sleep(){
-        System.out.println("cats sleeps");
-    }
-    public void scratch(){
-        System.out.println("cats makes big scratches");
-    }
-}
-
-class AnimalTest{
+class Main{
     public static void main(String[] args) {
-        Animal myAnimal = new Dog();
-        myAnimal.makeSound();
-        myAnimal.sleep();
-//        myAnimal.fatch();
-        System.out.println(myAnimal.getClass().getSimpleName());
-
-        try {
-            Cat cat = (Cat) myAnimal;
-            cat.makeSound();
-        }catch (ClassCastException exception){
-            System.out.println("Eroare la cast dintre un caine si o pisica");
-        }
-
-        Animal animal = new Cat();
-        Cat cat = (Cat) animal;
-        cat.makeSound();
-        cat.sleep();
-        cat.scratch();
-
-        System.out.println(cat instanceof Cat);
-        System.out.println(animal instanceof Cat);
-        System.out.println(myAnimal instanceof Dog);
+       Dog dog1 = new Dog("Patrocle", "Pichinez");
+        System.out.println(dog1.getName());
+        System.out.println(dog1.getRace());
+        dog1.setName("Teriblex");
+        dog1.setRace("Chiuaua");
+        System.out.println(dog1.getName());
+        System.out.println(dog1.getRace());
     }
 }

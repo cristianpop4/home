@@ -1,4 +1,4 @@
-package session4;
+package session5;
 
 public class forStatements {
     public static void main(String[] args) {

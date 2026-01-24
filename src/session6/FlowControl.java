@@ -1,4 +1,4 @@
-package session5;
+package session6;
 
 public class FlowControl {
     public static void main(String[] args) {

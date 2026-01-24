@@ -1,4 +1,4 @@
-package session5;
+package session6;
 
 import java.util.Scanner;
 
