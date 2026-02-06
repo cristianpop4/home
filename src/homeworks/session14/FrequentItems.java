@@ -3,21 +3,21 @@ package homeworks.session14;
 import java.util.*;
 
 public class FrequentItems {
-    private Map<String, Integer> frequnecy = new HashMap<>();
+    private Map<String, Integer> frequency = new HashMap<>();
 
     public void addPurchase(List<String> cart){
         for (String product : cart){
-            if (frequnecy.containsKey(product))
-                frequnecy.put(product, frequnecy.get(product) + 1);
-            else frequnecy.put(product, 1);
+            if (frequency.containsKey(product))
+                frequency.put(product, frequency.get(product) + 1);
+            else frequency.put(product, 1);
         }
     }
 
-    public List<String> getTop(int k){
-        Map<String, Integer> copyMap = new HashMap<>(frequnecy);
+    public List<String> getTopKFrequentItems(int k){
+        Map<String, Integer> copyMap = new HashMap<>(frequency);
         List<String> result = new ArrayList<>();
 
-        if (frequnecy.isEmpty() || k <= 0)
+        if (frequency.isEmpty() || k <= 0)
             return result;
 
         while (!copyMap.isEmpty() && result.size() < k){
@@ -53,7 +53,7 @@ public class FrequentItems {
             items.addPurchase(cart);
         }
         int k = 2;
-        List<String> topItems = items.getTop(k);
+        List<String> topItems = items.getTopKFrequentItems(k);
         System.out.println("Top " + k + " product is: " );
         System.out.println(topItems);
     }
